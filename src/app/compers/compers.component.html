@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<div class="row">
+  <div class="col-md-6">
+    <h1>Canvas Experimentation with example</h1>
+    <canvas id="canvas"></canvas>
+  </div>
+
+<div class="col-md-6">
+
+  <h3><span class="tim-note">Choisir</span> un produit</h3>
+  <input [(ngModel)]="selected" (ngModelChange)="selected" />
+  <button onclick="setBackground(this.url,canvas)">Change Image</button>
+  <h1>{{selected}}</h1>
+
+  <button onclick="addCercle(canvas)">Add a cercle</button>
+  <button onclick="addRectangle(canvas)">Add a rectangle</button>
+</div>
+</div>
+</body>
+</html>

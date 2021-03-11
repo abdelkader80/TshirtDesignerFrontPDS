@@ -1,0 +1,18 @@
+<div class="panel panel-heading">
+  <div class="panel-heading">Panier en cours</div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <tr>
+        <th>Id</th><th>Nom</th><th>Quantite</th><th>Prix unitaire</th>
+      </tr>
+      <tr *ngFor="let PI of panierService.getPanierEnCours().items.values()">
+        <td>{{PI.product.id}}</td>
+        <td>{{PI.product.name}}</td>
+        <td>{{PI.quantite}}</td>
+        <td>{{PI.price}}</td>
+      </tr>
+    </table>
+
+  </div>
+
+</div>
