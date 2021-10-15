@@ -13,6 +13,11 @@ import {MatSliderModule} from '@angular/material/slider';
 import { PanierComponent } from './panier/panier.component';
 import { ProdPersonaliseComponent } from './prod-personalise/prod-personalise.component';
 import { CompersComponent } from './compers/compers.component';
+import { ListproduitComponent } from './listproduit/listproduit.component';
+import { CreateproduitComponent } from './createproduit/createproduit.component';
+import { UpdateproductComponent } from './updateproduct/updateproduct.component';
+import { AllproductComponent } from './allproduct/allproduct.component';
+import { MagasinComponent } from './magasin/magasin.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { CompersComponent } from './compers/compers.component';
     DetailproduitComponent,
     PanierComponent,
     ProdPersonaliseComponent,
-    CompersComponent
+    CompersComponent,
+    ListproduitComponent,
+    CreateproduitComponent,
+    UpdateproductComponent,
+    AllproductComponent,
+    MagasinComponent
   ],
   imports: [
     BrowserModule,

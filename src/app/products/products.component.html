@@ -6,7 +6,7 @@
         <div class="class panel-heading">{{p.name}}</div>
         <div class="class panel-body ">
 
-          <img class="img-thumbnail img-rounded btn" (click)="detailProduit(p)" style="height:285px"  [src]="this.catService.host+'/photoProduct/'+p.id+'?ts='+getTs()"/>
+          <img class="img-thumbnail img-rounded btn" (click)="detailProduit(p)" style="height:285px"  src="src/assets/images/mug.png"/>
           <div *ngIf="authService.isAdmin()">
 
             <button (click)="onEditPhoto(p)">

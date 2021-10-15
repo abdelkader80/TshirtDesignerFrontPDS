@@ -32,6 +32,7 @@ export class ProductsComponent implements OnInit {
 
         if (P1 == 1) {
           this.getProducts('/produits/search/produitenselection');
+         
         }
     this.router.events.subscribe((val) => {
 
@@ -65,6 +66,9 @@ export class ProductsComponent implements OnInit {
     this.catService.getResource(url).subscribe(
       (data) => {
         this.produits = data;
+        console.log(data)
+        // console.log(this.catService.host+'/photoProduct/'+this.produits[0]._embedded[0].produits[0].id)
+        
       },
       (err) => {
         console.log(err);

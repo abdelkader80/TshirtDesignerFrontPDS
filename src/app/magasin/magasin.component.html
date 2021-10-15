@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <ul *ngIf="cat" class="list-group">
+                <li [ngClass]="c==currentcat?'active':''" *ngFor="let c of cat._embedded.categories"
+                    class="list-group-item" (click)="onGetproducts(c)">
+                    {{c.name}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-8" *ngIf="produits">
+            <div class="panel panel-default">
+                <div class="panel-heading">Liste des produits</div>
+                <div class="panel-body">   
+                    
+                        <div class="col-md-6" *ngFor="let p of produits._embedded.produits">
+                            <div class="panel panel-success">
+                                <div class="panel-heading">
+                                    {{p.name}}
+                                </div>
+                                <div class="panel-body">
+                                   <img class="img-responsive img-circle" [src]="getphotonom(p.id)" alt=""> 
+                                </div>
+                                <div>
+                                    <label>
+                                      Prix :{{p.currentprice|number:'0.00'}}
+                                    </label>
+                                  </div>
+                                  <div>
+                                    <span *ngIf="p.promotion">
+                                    <img src="assets/images/promo.png" class="img-thumbnail img-circle" style="height: 40px">
+                        
+                                  </span>
+                                    <span *ngIf="p.selected">
+                                    <img src="assets/images/favorite.png" class="img-thumbnail img-circle" style="height: 40px">
+                        
+                                  </span>
+                                    <span *ngIf="p.disponible">
+                                    <img src="assets/images/disponible.png" class="img-thumbnail img-circle" style="height: 40px">
+                        
+                                  </span>
+                        
+                        
+                                  </div>
+                            </div>
+    
+                        </div> 
+
+                    
+                                    
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

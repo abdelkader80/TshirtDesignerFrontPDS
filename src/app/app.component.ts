@@ -41,7 +41,9 @@ export class AppComponent implements OnInit {
 
   GetProductByCat(c) {
     this.currentcategorie = c;
-    this.router.navigateByUrl('/products/2/' + c.id);
+   /* this.router.navigateByUrl('/products/2/' + c.id);*/
+   this.catService.getProduct('/categories/'+c.id+'/products')
+
 
   }
 

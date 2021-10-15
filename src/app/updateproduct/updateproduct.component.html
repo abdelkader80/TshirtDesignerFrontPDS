@@ -1,0 +1,40 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h4><b>Modification</b></h4>
+    </div>
+    <div class="panel-body">
+<form (ngSubmit)='onSubmit(f)' #f="ngForm">
+    <div class="form-group">
+        <label for="text">Nom:</label>
+        <input type="Text" class="form-control" [(ngModel)]="nouvprod.name" name="name" id="name">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Taille</label>
+        <input type="text" class="form-control" [(ngModel)]="nouvprod.taille" name="taille" id="taille">
+    </div>
+    <div class="form-group">
+        <label for="exampleColorInput" class="form-label">Couleur</label>
+        <input type="color" class="form-control form-control-color" [(ngModel)]="nouvprod.couleur" name="couleur" id="nom" id="exampleColorInput" value="#563d7c">
+    </div>
+    <div class="form-group">
+        <label for="text">Description</label>
+        <input type="text" class="form-control" [(ngModel)]="nouvprod.description" name="Description" id="Description">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Prix</label>
+        <input type="number" class="form-control" [(ngModel)]="nouvprod.currentprice" name="nom" id="prix">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Quantité</label>
+        <input type="number" class="form-control" [(ngModel)]="nouvprod.quantite" name="quantite" id="quantite">
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" [(ngModel)]="nouvprod.promotion" name="promotion" id="promotion"> Promotion</label>
+    </div>
+    <div class="checkbox">
+        <label><input type="checkbox" [(ngModel)]="nouvprod.selected" name="selection" id="selection"> Selection</label>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+    </div>
+</div>
