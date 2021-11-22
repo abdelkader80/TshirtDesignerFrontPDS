@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
       <div class="col-md-5">
-        <img class="img-thumbnail" [src]="this.detailservice.host+'/photoProduct/'+currentProduct.id+'?ts='+getTS()"/>
+        <img class="img-thumbnail" [src]="getphotonom(currentProduct.id)"/>
         <div *ngIf="this.authService.isAdmin()">
           <button *ngIf="!editPhoto" (click)="onEditPhoto(currentProduct)">
             <span class="glyphicon glyphicon-edit"></span>

@@ -4,6 +4,7 @@ import {CatalogueService} from '../catalogue.service';
 import {Produit} from '../model/produit.model';
 import {AuthentificationService} from '../services/authentification.service';
 import {HttpEventType, HttpResponse} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-detailproduit',
@@ -71,6 +72,10 @@ export class DetailproduitComponent implements OnInit {
   }
 
   onUpdateProduct(value: any) {
+
+  }
+  getphotonom(id){
+    return environment.host+'/app/photoProduct/'+id;
 
   }
 }

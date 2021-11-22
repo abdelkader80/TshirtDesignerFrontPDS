@@ -19,7 +19,7 @@
                                     {{p.name}}
                                 </div>
                                 <div class="panel-body">
-                                   <img class="img-responsive img-circle" [src]="getphotonom(p.id)" alt=""> 
+                                   <img class="img-responsive img-circle" (click)="detailProduit(p)" [src]="getphotonom(p.id)" alt=""> 
                                 </div>
                                 <div>
                                     <label>
@@ -28,7 +28,7 @@
                                   </div>
                                   <div>
                                     <span *ngIf="p.promotion">
-                                    <img src="assets/images/promo.png" class="img-thumbnail img-circle" style="height: 40px">
+                                    <img src="src/assets/images/promo.png" class="img-thumbnail img-circle" style="height: 40px">
                         
                                   </span>
                                     <span *ngIf="p.selected">

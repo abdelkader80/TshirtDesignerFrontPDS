@@ -10,6 +10,7 @@ import { ListproduitComponent } from './listproduit/listproduit.component';
 import { CreateproduitComponent } from './createproduit/createproduit.component';
 import { UpdateproductComponent } from './updateproduct/updateproduct.component';
 import { MagasinComponent } from './magasin/magasin.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path:'listproduit',component:ListproduitComponent},
   {path:'ajoutproduit', component:CreateproduitComponent},
   {path:'modifierproduit/:id',component:UpdateproductComponent},
+  {path:'' ,component:HomeComponent},
   {path:'listmagasin',component:MagasinComponent}
 ];
 

@@ -13,6 +13,17 @@ export class Produit{
     quantite:number;
     photoNom:string;
     categorie:categorie
+    _links: {
+        self: {
+          href: string
+        },
+        produit: {
+          href: string
+        },
+        categorie: {
+          href: string
+        }
+      }
        
     
 
