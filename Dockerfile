@@ -18,6 +18,8 @@ RUN npm install -D typescript@4.0.2
 
 COPY . /app
 
+CMD ng serve --host 0.0.0.0
+
 #RUN npm run build --prod
 
 # Stage 2
