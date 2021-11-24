@@ -18,12 +18,12 @@ RUN npm install -D typescript@4.0.2
 
 COPY . /app
 
-CMD ng serve --host 0.0.0.0
+#♣CMD ng serve --host 0.0.0.0
 
-#RUN npm run build --prod
+RUN npm run build --prod
 
 # Stage 2
 
-#FROM nginx:1.17.1-alpine
+FROM nginx:1.17.1-alpine
 
-#COPY --from=build-step /app/dist/pds2 /usr/share/nginx/html
+COPY --from=build-step /app/dist/pds2 /usr/share/nginx/html
